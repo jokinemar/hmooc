@@ -4,6 +4,7 @@ const Course = ({course}) => {
         <div>
             <h1>{course.name}</h1>
             {course.parts.map(part => <p key={part.id}>{part.name} {part.exercises}</p>)}
+            <h4>total of {course.parts.reduce((sum, part) => sum + part.exercises, 0)} exercises</h4>
         </div>
     )
 }
